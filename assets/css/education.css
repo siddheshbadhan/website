@@ -39,7 +39,10 @@ html {
 /*color of education page heading*/
 
 .edu_background {
-  color: #4e00bb;
+  /* color: #4e00bb; */
+  /* color: #6ACFC7; */
+  /* color: #957C3D; */
+  color: #2272FF; 
 }
 
 /* -----Education Section CSS----- */
@@ -389,7 +392,7 @@ header p {
   content: "";
   background: #C5CAE9;
   width: 5px;
-  height: 95%;
+  height: 600px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

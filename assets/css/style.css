@@ -1,8 +1,14 @@
-@font-face {
+/* @font-face {
   font-family: "Agustina";
   src: url(../fonts/Agustina.woff);
-}
+} */
 
+@font-face {
+  font-family: "Orpheus Italic";
+  src: url(../fonts/OrpheusItalic.woff) format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
 
 /*CSS variable declaration for light/dark mode*/
 
@@ -25,7 +31,6 @@ html[data-theme="light"] {
   --col-icon-linkedin: #0e76a8;
   --col-icon-kaggle: #41aff3;
   --col-icon-github: #24292e;
-  --col-icon-instagram: rgb(201, 94, 174);
   --col-icon-mail: rgb(209, 82, 82);
   --col-icon-google-scholar: #3cba54;
   --col-icon-codeforces: rgb(19, 145, 184);
@@ -35,9 +40,10 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
   --bg-mybtn: rgb(230, 109, 129);
-  --bg-nav: #6617cb;
-  --bg-nav-img: linear-gradient(315deg, #6617cb 0%, #882463 74%);
-  --bg-footer: linear-gradient(315deg, #6617cb 0%, #882463 74%);
+  --bg-nav: #2272FF;
+  /* --bg-nav: #6617cb; */
+  --bg-nav-img: linear-gradient(315deg, #2272FF 0%, #882463 74%);
+  --bg-footer: linear-gradient(315deg, #2272FF 0%, #882463 74%);
   --bg: #191919;
   --text: #ffffff;
   --text-color: #fff;
@@ -53,7 +59,6 @@ html[data-theme="dark"] {
   --col-icon-linkedin: #0e76a8;
   --col-icon-kaggle: #41aff3;
   --col-icon-github: #24292e;
-  --col-icon-instagram: rgb(201, 94, 174);
   --col-icon-mail: rgb(209, 82, 82);
   --col-icon-google-scholar: #3cba54;
   --col-icon-codeforces: rgb(19, 145, 184);
@@ -73,7 +78,7 @@ html[data-theme="dark"] {
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px #bb86fc;
+  -webkit-box-shadow: inset 0 0 6px #89CFF0;
   border-radius: 2px;
   background: #f1f1f1;
 }
@@ -81,20 +86,20 @@ html[data-theme="dark"] {
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   max-height: 10px;
-  -webkit-box-shadow: inset 0 0 6px #bb86fc;
-  background: #bb86fc;
+  -webkit-box-shadow: inset 0 0 6px #89CFF0;
+  background: #89CFF0;
   transition: 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ca9eff;
+  background: #ADD8E6;
   
 }
 
 /* Custom Scrollbar for Mozilla Firefox*/
 html{
   overflow-y: visible;
-  scrollbar-color: #ca9eff #f1f1f1;
+  scrollbar-color: #ADD8E6 #f1f1f1;
   scrollbar-width: auto;
 }
 
@@ -116,7 +121,7 @@ body {
 #btnScrollToTop {
   width: 50px;
   height: 50px;
-  background-color: #bb86fc;
+  background-color: #89CFF0;
   color: #fff;
   margin: 8px;
   border: none;
@@ -229,9 +234,10 @@ html {
 }
 
 .navbar-brand {
-  font-family: Agustina;
+  font-family: "Orpheus Italic", sans-serif;
   font-size: 30px;
   font-weight: bold;
+  font-style: italic;
 }
 
 .navbar {
@@ -272,13 +278,13 @@ html {
 .dark_toggler:checked {
   background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
   transition: background-image 0.9s;
-  box-shadow: 0px 2px 5px 1px rgb(187, 134, 201);
+  box-shadow: 0px 2px 5px 1px #ADD8E6;
 }
 
 .dark_toggler:checked:before {
   transform: translate(150%);
   transition: all 0.9s;
-  background-color: #bb86fc;
+  background-color: #89CFF0;
 }
 /* end of dark mode toggle switch button */
 
@@ -395,7 +401,7 @@ color: #ffffff !important;
       margin-right: auto;
       bottom: 0;
       width: 32%;
-      border-bottom: 3px solid #6a00bb;
+      border-bottom: 3px solid #2272FF;
   }
   
   .nav-item-hover::after {
@@ -406,7 +412,7 @@ color: #ffffff !important;
       height: 0.15em;
       bottom: 0;
       width: 0%;
-      background-color: #6a00bb;
+      background-color: #2272FF;
       transition: all ease-in-out 280ms;
   }
   
@@ -433,7 +439,7 @@ html[light-mode="light"] .nav-link{
   color: #000000 !important;
 }
 html[light-mode="light"] .nav-link:hover{
-  color: 	rgb(106, 0, 187) !important;
+  color: 	#2272FF !important;
 }
 html[light-mode="light"] .navbar-brand:hover{
   color: #000000 !important;
@@ -626,59 +632,48 @@ Rotate Transition in foote Soical Icon
 }
 
 
+
 /*
------------------------------
- INSTAGRAM MICROANIMATION
------------------------------
-*/
+  --------------------------
+     GOOGLE MICROANIMATION
+  --------------------------
+  */
 
-.st0 {
-  fill: none;
-  stroke: #EF4649;
-  stroke-width: 7;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-}
-
-.instagram-icon-footer:hover #littleCircle {
-  stroke-dasharray: 150;
-}
-
-.instagram #shutter {
-  display: none;
-}
-
-.instagram-icon-footer:hover #shutter {
-  display: block;
-  animation: shutter 1s linear infinite;
-}
-
-.instagram-icon-footer:hover #lens {
-  fill: #EF4649;
-  animation: lens 1.5s linear infinite;
-}
-
-@keyframes shutter {
-  0%,
-  50% {
-      stroke-dashoffset: 150;
+  /* .google-icon-footer path {
+      transition: transform 0.3s ease-in-out;
   }
-  75% {
-      fill: #EF4649;
-      stroke-dashoffset: 0;
-      stroke-width: 11;
-  }
-}
 
-@keyframes lens {
-  0%,
-  75% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
+    .google:hover .google-icon-footer path {
+      animation: blink 2s ease-in-out infinite;
+    }
+
+  @keyframes blink {
+      0%, 100% {
+          opacity: 1;
+      }
+      50% {
+          opacity: 0;
+      }
+    } */
+
+    
+    /* Define the mask animation */
+    @keyframes rotate-and-drop {
+      0% {
+        transform: rotate(0) translateY(0);
+      }
+      50% {
+        transform: rotate(180deg) translateY(100px);
+      }
+      100% {
+        transform: rotate(360deg) translateY(0);
+      }
+    }
+    
+    /* Apply the mask animation */
+    .google:hover .google-icon-footer path {
+      animation: rotate-and-drop 1s ease-in-out forwards;
+    }
 
 
 /*
@@ -717,13 +712,10 @@ Rotate Transition in foote Soical Icon
   width: 30px;
 }
 
-
-/* instagram SVG micro animation */
-
-.instagram-icon-footer {
-  width: 70px;
-  padding-right: 24px;
-  padding-bottom: 8px;
+.google-icon-footer {
+  margin-bottom: -12px;
+  width: 35px;
+  transition: transform 0.3s ease-in-out;
 }
 
 
@@ -763,13 +755,13 @@ Rotate Transition in foote Soical Icon
   background: #2b2a2A;
 }
 
-.rounded-social-buttons .social-button.instagram {
+.rounded-social-buttons .social-button.google {
   background: #2b2a2A;
   box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
 }
 
-.rounded-social-buttons .social-button.instagram:hover,
-.rounded-social-buttons .social-button.instagram:focus {
+.rounded-social-buttons .social-button.google:hover,
+.rounded-social-buttons .social-button.google:focus {
   color: #000;
   background: #2b2a2A;
 }
@@ -800,7 +792,7 @@ Contact Form In Footer
   font-size: 25px;
   font-weight: 200;
   line-height: 22px;
-  border-bottom: 3px solid #bb86fc;
+  border-bottom: 3px solid #89CFF0;
 }
 
 .form-header {
@@ -829,7 +821,7 @@ form {
 }
 
 .form-style-6 h1 {
-  background: #bb86fc;
+  background: #89CFF0;
   font-size: 140%;
   font-weight: 300;
   text-align: center;
@@ -859,7 +851,7 @@ form {
   background: transparent;
   margin-bottom: 4%;
   border: #000;
-  border-bottom: 2px solid #bb86fc;
+  border-bottom: 2px solid #89CFF0;
   padding: 3%;
   color: rgb(107, 105, 105);
   font: 95% Arial, Helvetica, sans-serif;
@@ -876,9 +868,9 @@ form {
 .form-style-6 input[type="url"]:focus,
 .form-style-6 textarea:focus,
 .form-style-6 select:focus {
-  box-shadow: 0 0 5px #bb86fc;
+  box-shadow: 0 0 5px #89CFF0;
   padding: 3%;
-  border: 1px solid #bb86fc;
+  border: 1px solid #89CFF0;
   border-radius: 2px;
 }
 
@@ -890,8 +882,8 @@ form {
   width: 100%;
   margin-top: 2rem;
   padding: 3%;
-  background: #bb86fc;
-  border-bottom: 2px solid #bb86fc;
+  background: #89CFF0;
+  border-bottom: 2px solid #89CFF0;
   border-radius: 23px;
   border-top-style: none;
   border-right-style: none;
@@ -902,7 +894,7 @@ form {
 
 .form-style-6 input[type="submit"]:hover,
 .form-style-6 input[type="button"]:hover {
-  background:#6a00bbd2;;
+  background:#2272FF;
 
 }
 
@@ -1031,7 +1023,7 @@ outline: none;
   border-radius: 50px;
   border-style: none;
   transition: 0.5s ease background-color, 0.5s ease box-shadow;
-  background: #bb86fc;
+  background: #89CFF0;
 }
 #lnch_btn {
   position: absolute;

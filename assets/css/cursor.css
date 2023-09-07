@@ -2,10 +2,10 @@ html,
 html *,
 body,
 body * {
-  cursor: none;
+  cursor: pointer; /* Set the cursor to normal */
 }
 
-.cursor-dot,
+/* .cursor-dot,
 .cursor-dot-outline {
   pointer-events: none;
   z-index: 2;
@@ -28,4 +28,4 @@ body * {
   width: 20px;
   height: 20px;
   background-color: rgba(211, 115, 115, 0.959);
-}
+} */

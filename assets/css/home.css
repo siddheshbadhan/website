@@ -13,10 +13,10 @@ html[data-theme="light"] {
   --col-icon-dribbble: #ea4c89;
   --col-icon-linkedin: #0e76a8;
   --col-icon-kaggle: #41aff3;  
-  --col-icon-instagram: rgb(201, 94, 174);
   --col-icon-mail:rgb(209, 82, 82);
   --col-icon-google-scholar:#3cba54;
   --col-icon-codeforces:rgb(19, 145, 184);
+  --col-icon-google: #0e76a8;
   --col-icon-leetcode:rgb(255, 181, 62);
   --shadow-col: rgba(0, 0, 0, 0.3);
 
@@ -32,7 +32,7 @@ html[data-theme="dark"] {
   --col-icon-dribbble: #ea4c89;
   --col-icon-linkedin: #0e76a8;
   --col-icon-kaggle: #41aff3;
-  --col-icon-instagram: rgb(201, 94, 174);
+  --col-icon-google: #0e76a8;
   --col-icon-mail:rgb(209, 82, 82);
   --col-icon-google-scholar:#3cba54;
   --col-icon-codeforces:rgb(19, 145, 184);
@@ -51,7 +51,8 @@ body{
 }
 
 .section {
-  background-color: rgb(63, 25, 170);
+  /* background-color: rgb(63, 25, 170); */
+  background-color: #2272FF;
   justify-content: center;
   align-items: center;
 }
@@ -76,6 +77,40 @@ body{
 .animated-text span.active {
   display: inline;
 }
+.interest-box {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #4682B4; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.download-button {
+  display: inline-block;
+  position: absolute;
+  bottom: 50px; /* Adjust the top position as needed */
+  right: 40px; /* Adjust the right position as needed */
+  padding: 8px 14px;
+  margin: 5px;
+  background-color: #7393B3; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Style for the icons */
+.fas {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .download-button {
+    position: static; /* Reset the position */
+    display: block;
+    margin: 40px auto; /* Center horizontally and add vertical margin */
+  }
+}
+
 
 .animated-text:after {
   content: ".";
@@ -218,61 +253,6 @@ html[light-mode="dark"] .socialicon{
   
 }
 
-/*
----------------------------
-   INSTAGRAM MICROANIMATION
----------------------------
-*/
-
-.instagram-icon {
-  width: 90px !important;
- 
-}
-.st0 {
-  fill:none;
-  stroke:#EF4649;
-  stroke-width:7;
-  stroke-linecap:round;
-  stroke-miterlimit:10;
-}
-
-.instagram:hover #littleCircle {
-  stroke-dasharray:150;
-}
-
-.instagram #shutter{
-  display:none;
-}
-.instagram:hover #shutter{
-  display: block;
-  animation: shutter 1s linear infinite;
-}
-.instagram:hover #lens{
-  fill:#EF4649;
-  animation: lens 1.5s linear infinite;
-
-}
-
-@keyframes shutter {
-  0%, 50% {
-          stroke-dashoffset: 150;
-          
-      }
-  75% {
-          fill:#EF4649;
-          stroke-dashoffset: 0;
-          stroke-width:11;
-      }
-}
-
-@keyframes lens {
-  0%, 75% {
-          opacity: 0;
-      }
-  100% {
-          opacity: 1;
-      }
-}
 
 
 /*
@@ -423,7 +403,39 @@ html[light-mode="dark"] .github-icon{
         y:3.5;
     }
   }
-  
+
+  /*
+  --------------------------
+     GOOGLE MICROANIMATION
+  --------------------------
+  */
+
+  .google-icon {
+    width: 40px;
+    margin-left: 12px;
+    margin-top: 5px;
+    fill: #000000;
+  }
+
+  .google-icon path {
+    transition: transform 0.3s ease-in-out;
+  }
+
+    .google:hover .google-icon path {
+      animation: rotate-and-drop 1s ease-in-out forwards;
+    }
+
+    @keyframes rotate-and-drop {
+      0% {
+        transform: rotate(0) translateY(0);
+      }
+      50% {
+        transform: rotate(180deg) translateY(100px);
+      }
+      100% {
+        transform: rotate(360deg) translateY(0);
+      }
+    }
   
 
 /*
